@@ -28,7 +28,7 @@ class Node:
     def PrintTree(self):
         if self.left:
             self.left.PrintTree()
-        print(self.data),
+        print(self.data, end=" ")
         if self.right:
             self.right.PrintTree()
 
@@ -86,15 +86,22 @@ root.left.right = Node(9)
 root.right.left = Node(13)
 root.right.right = Node(15)
 
+print("Tree:")
 root.PrintTree()
+print("")
 
+print("Test searchData:")
 print(root.searchData(9))
 print(root.searchData(10))
 
+print("Test searchDataNonRecursive:")
 print(root.searchDataNonRecursive(9))
 print(root.searchDataNonRecursive(10))
 
+print("Test searchLeftData:")
 print(root.searchLeftData(9))
 print(root.searchLeftData(10))
+
+print("Test searchRightData:")
 print(root.searchRightData(9))
 print(root.searchRightData(10))
