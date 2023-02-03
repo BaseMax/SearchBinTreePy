@@ -28,21 +28,21 @@ class Node:
     def PrintTree(self):
         if self.left:
             self.left.PrintTree()
-        print( self.data),
+        print(self.data),
         if self.right:
             self.right.PrintTree()
 
     def searchData(self, data):
         if data < self.data:
             if self.left is None:
-                return str(data) + " Not Found"
+                return -1
             return self.left.searchData(data)
         elif data > self.data:
             if self.right is None:
-                return str(data) + " Not Found"
+                return -1
             return self.right.searchData(data)
         else:
-            return str(self.data) + ' is found'
+            return self.data
     
     def searchLeftData(self, data):
         if data < self.data:
@@ -76,9 +76,7 @@ class Node:
                 self = self.right
             else:
                 return self.data
-                # return str(self.data) + ' is found'
         return -1
-        # return str(data) + " Not Found"
 
 root = Node(12)
 root.left = Node(6)
