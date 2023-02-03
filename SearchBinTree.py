@@ -85,3 +85,16 @@ root.left.left = Node(3)
 root.left.right = Node(9)
 root.right.left = Node(13)
 root.right.right = Node(15)
+
+root.PrintTree()
+
+print(root.searchData(9))
+print(root.searchData(10))
+
+print(root.searchDataNonRecursive(9))
+print(root.searchDataNonRecursive(10))
+
+print(root.searchLeftData(9))
+print(root.searchLeftData(10))
+print(root.searchRightData(9))
+print(root.searchRightData(10))
