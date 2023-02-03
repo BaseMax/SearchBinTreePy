@@ -77,3 +77,11 @@ class Node:
             else:
                 return str(self.data) + ' is found'
         return str(data) + " Not Found"
+
+root = Node(12)
+root.left = Node(6)
+root.right = Node(14)
+root.left.left = Node(3)
+root.left.right = Node(9)
+root.right.left = Node(13)
+root.right.right = Node(15)
