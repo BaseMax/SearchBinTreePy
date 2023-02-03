@@ -75,8 +75,10 @@ class Node:
             elif data > self.data:
                 self = self.right
             else:
-                return str(self.data) + ' is found'
-        return str(data) + " Not Found"
+                return self.data
+                # return str(self.data) + ' is found'
+        return -1
+        # return str(data) + " Not Found"
 
 root = Node(12)
 root.left = Node(6)
